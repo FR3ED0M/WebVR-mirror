@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <!--Main aframe script-->
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+      
+    <!--Environment-->
+    <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
+    <a-gltf-model src="Mirror/scene.gltf"></a-gltf-model>
+      
+    <script src="https://rawgit.com/flysonic10/aframe-passthrough/master/dist/aframe-passthrough-component.min.js"></script> 
+  </head>
+    
+  <body>
+    <a-scene>
+      <!--environment-->    
+      <a-entity environment="preset: default; ground: flat"></a-entity>
+        
+      <a-assets>
+        <a-asset-item id="mirror" src="Mirror/scene.gltf"></a-asset-item>  
+      </a-assets>
+      
+        <a-passthrough position="0 1.346 -3.38" rotation="-8.19 0 0" scale="0.096 0.154 0.972" width="10" height="15"></a-passthrough>    
+        
+      <a-entity id="mirror" 
+                gltf-model="#mirror" 
+                position="0.00 1.380 -3.50" 
+                scale="0.005 0.005 0.005"></a-entity>
+        
+      <a-box position="2.00 1.358 -3.50" 
+             rotation="0 0 0" 
+             scale="0.982 2.721 0.234" 
+             color="#1ccdec"></a-box>    
+             
+    </a-scene>
+  </body>
+</html>
